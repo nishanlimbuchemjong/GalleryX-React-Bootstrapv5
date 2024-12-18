@@ -40,7 +40,7 @@ function App() {
       <br />
 
       {/* Conditional Rendering for Loading or No Images */}
-      {!isLoading && images.length === 0 && <h1>No Images Found</h1>}
+      {!isLoading && images.length === 0 && <h1 className='text-center'>No Images Found</h1>}
       {isLoading ? (
         <h1>Loading ........</h1>
       ) : (
