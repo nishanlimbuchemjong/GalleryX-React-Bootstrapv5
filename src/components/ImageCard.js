@@ -4,27 +4,23 @@ const ImageCard = ({ image }) => {
   const tags = image.tags.split(',');
 
   return (
-    <div className="col-md-4 mb-4">
-      <div className="card shadow-sm">
+    <div className="col-md-4 col-sm-6 col-12 mb-4">
+      <div className="card shadow-sm h-100">
         {/* Image Section */}
-        <img src={image.webformatURL} className="card-img-top" alt="Gallery item" />
+        <img
+          src={image.webformatURL}
+          className="card-img-top"
+          alt="Gallery item"
+          style={{ height: '400px', objectFit: 'cover' }}
+        />
         
         {/* Card Body */}
         <div className="card-body">
-          <h5 className="card-title text-black fw-bold">User: <small className="text-primary ">{image.user}</small></h5>
-          <hr />
-          <div className="mb-2">
-            <strong>Views:</strong> {image.views.toLocaleString()}
-          </div>
-          <div className="mb-2">
-            <strong>Downloads:</strong> {image.downloads.toLocaleString()}
-          </div>
-          <div className="mb-2">
-            <strong>Likes:</strong> {image.likes.toLocaleString()}
-          </div>
-          <div className="mb-2">
-            <strong>Comments:</strong> {image.comments.toLocaleString()}
-          </div>
+          <h5 className="card-title">User: <span className="text-primary">{image.user}</span></h5>
+          <p className="card-text mb-2"><strong>Views:</strong> {image.views.toLocaleString()}</p>
+          <p className="card-text mb-2"><strong>Downloads:</strong> {image.downloads.toLocaleString()}</p>
+          <p className="card-text mb-2"><strong>Likes:</strong> {image.likes.toLocaleString()}</p>
+          <p className="card-text mb-2"><strong>Comments:</strong> {image.comments.toLocaleString()}</p>
         </div>
         
         {/* Tags Section */}
