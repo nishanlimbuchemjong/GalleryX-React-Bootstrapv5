@@ -16,7 +16,7 @@ const ImageCard = ({ image }) => {
         
         {/* Card Body */}
         <div className="card-body">
-          <h5 className="card-title">User: <span className="text-primary">{image.user}</span></h5>
+          <h5 className="card-title">User: <span className="text-primary">{image.user}</span></h5><hr />
           <p className="card-text mb-2"><strong>Views:</strong> {image.views.toLocaleString()}</p>
           <p className="card-text mb-2"><strong>Downloads:</strong> {image.downloads.toLocaleString()}</p>
           <p className="card-text mb-2"><strong>Likes:</strong> {image.likes.toLocaleString()}</p>
