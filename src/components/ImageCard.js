@@ -1,6 +1,8 @@
 import React from 'react';
 
 const ImageCard = ({ image }) => {
+  const tags = image.tags.split(',');
+
   return (
     <div className="col-md-4 mb-4">
       <div className="card">
@@ -12,7 +14,11 @@ const ImageCard = ({ image }) => {
           <p className="card-text">Downloads: {image.downloads}</p>
           <p className="card-text">Likes: {image.likes}</p>
           <p className="card-text">Comments: {image.comments}</p>
-          <a href="#" className="btn btn-primary">Go somewhere</a>
+        </div>
+        <div className="tags">
+          {tags.map(tag=>(
+            <span key={image.id}> #{tag}</span>
+          ))}
         </div>
       </div>
     </div>
