@@ -21,12 +21,12 @@ function App() {
 
   return (
     <div className="container mt-4">
-      <div className="row">
+      {isLoading ? <h1>Loading</h1>:<div className="row">
         {/* Image Cards */}
         {images.map((image) => (
           <ImageCard key={image.id} image={image} />
         ))}
-      </div>
+      </div>}
     </div>
   );
 }
