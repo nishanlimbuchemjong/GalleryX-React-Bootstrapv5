@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import ImageCard from './components/ImageCard';
+import ImageSearch from './components/ImageSearch';
 
 function App() {
   const [images, setImages] = useState([]);
@@ -21,7 +22,8 @@ function App() {
 
   return (
     <div className="container mt-4">
-      {isLoading ? <h1>Loading</h1>:<div className="row">
+      <ImageSearch/><br />
+      {isLoading ? <h1>Loading ........</h1>:<div className="row">
         {/* Image Cards */}
         {images.map((image) => (
           <ImageCard key={image.id} image={image} />
