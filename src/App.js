@@ -23,6 +23,8 @@ function App() {
   return (
     <div className="container mt-4">
       <ImageSearch searchText={(text)=>setTerm(text)}/><br />
+      {!isLoading && images.length === 0 && <h1>No Image Found</h1>}
+      
       {isLoading ? <h1>Loading ........</h1>:<div className="row">
         {/* Image Cards */}
         {images.map((image) => (
