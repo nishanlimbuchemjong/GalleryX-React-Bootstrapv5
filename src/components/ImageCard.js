@@ -16,8 +16,8 @@ const ImageCard = ({ image }) => {
           <p className="card-text">Comments: {image.comments}</p>
         </div>
         <div className="tags">
-          {tags.map(tag=>(
-            <span key={image.id}> #{tag}</span>
+          {tags.map((tag, index)=>(
+            <span key={index}> #{tag}</span>
           ))}
         </div>
       </div>
